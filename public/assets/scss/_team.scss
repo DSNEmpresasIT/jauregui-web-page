@@ -1,0 +1,207 @@
+/* ----------------------------------
+	Team section Styles
+------------------------------------ */
+
+.team_wrapper{
+    position: relative;
+    &.team_wrapper_1{
+        &::after {
+            top: 0%;
+            left: 0;
+            z-index: -2;
+            width: 100%;
+            height: calc(60% + 30px);
+            @media (max-width:990px) {
+                height: calc(40% + 30px);
+            }
+            content: "";
+            position: absolute;
+            background-image: url(../img/home_02/team_bg.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .single_team_item{
+            .team_img{
+                height: 350px;
+                border-radius: 4px;
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .blog_socal_link{
+                    position: relative;
+                    z-index: 2;
+                    justify-content: center !important;
+                    transition: all 0.4s ease-in-out;
+                    a{
+                        border: 1.5px solid rgba(182, 157, 116, 0.1);
+                    }
+                }
+                &::after{
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    visibility: hidden;
+                    opacity: 0;
+                    width: 100%;
+                    height: 100%;
+                    content: '';
+                    position: absolute;
+                    background: linear-gradient(180deg, rgba(3, 58, 91, 0) 36.12%, #033A5B 100%);
+                    border-radius: 4px;
+                    transition: all 0.3s ease;
+                }
+            }
+            &:hover{
+                .team_img{
+                    img{
+                        transform: none;
+
+                    }
+                    .blog_socal_link{
+                        margin-top: -50px;
+                    }
+                    &::after{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &.team_wrapper_2{
+        &::after {
+            top: 0%;
+            left: 0;
+            z-index: -2;
+            width: 100%;
+            height: calc(60% + 30px);
+            @media (max-width:990px) {
+                height: calc(40% + 30px);
+            }
+            content: "";
+            position: absolute;
+            background-image: url(../img/about/bg_05.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .team_shape{
+            position: absolute;
+            top: 20%;
+            left: 2%;
+            animation: top-to-left 4s ease-in-out infinite;
+        }
+        .theme-btn{
+            background-color: $primary-3;
+            transition: all 0.4s ease-in-out;
+            &:hover{
+                background-color: $primary-2;
+            }
+        }
+    }
+    &.team_wrapper_3{
+        &::after {
+            top: 0%;
+            left: 0;
+            z-index: -2;
+            width: 100%;
+            height: calc(60% + 30px);
+            @media (max-width:990px) {
+                height: calc(40% + 30px);
+            }
+            content: "";
+            position: absolute;
+            background-image: url(../img/home_04/bg.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    .single_team_btn{
+        background-image: url(../img/home_01/bg_01.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        @include overlay(#033A5B , 0.80) ;
+        &:before {
+            border-radius: 122px;
+        }
+        text-align: center;
+        border-radius: 122px;
+        padding: 15px;
+        span{
+            color: $white;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            a{
+                font-size: 18px;
+                color: $primary-3;
+                text-decoration: underline;
+                i{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+.single_team_item{
+    &.single_team_item_2{
+        .content{
+            .btnd{
+                &:hover{
+                    color: $primary !important;
+                }
+            }
+        }
+    }
+    .team_img{
+        height: 350px;
+        border-radius: 4px;
+        width: 100%;
+        overflow: hidden;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            @include transition(0.4s);
+        }
+    }
+    .content{
+        margin: 30px 0px;
+        padding: 10px;
+        h4{
+            color: $primary-2;
+
+        }
+        a{
+            margin-top: 20px;
+            text-decoration: underline;
+            padding: 0px 20px;
+            margin-bottom: 20px;
+            i{
+                margin-left: 10px;
+                transform: rotate(90deg);
+            }
+            &:hover{
+                color: $primary-3;
+            }
+        }
+    }
+    &:hover{
+        .team_img{
+            img{
+                transform: scale(1.1);
+            }
+        }
+    }
+}

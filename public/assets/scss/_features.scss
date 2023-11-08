@@ -1,0 +1,136 @@
+/* ----------------------------------
+	Feature section Styles
+------------------------------------ */
+
+.feature_wrapper{
+    &.feature_wrapper_2{
+        margin-top: 0px;
+        &::after{
+            display: none;
+        }
+    }
+    &.feature_wrapper_3{
+        margin-top: 0px;
+        .single_feature_item{
+            h4{
+                color: $white;
+                font-family: $pr;
+                text-transform: capitalize;
+            }
+            .single_feature_widget{
+                position: relative;
+                z-index: 1;
+                border: none;
+                .single_icon{
+                    border-radius: 0px;
+                    height: 70px;
+                    margin: 0 !important;
+                    width: 70px;
+                    img{
+                        width: auto;
+                        height: 35px;
+                    }
+                }
+                a{
+                    background-color: transparent;
+                    border: 2px solid rgba(255, 255, 255, 0.2);
+                    border-radius: 4px;
+                    i{
+                        margin-left: 8px;
+                        transform: rotate(90deg);
+                    }
+                    &:hover{
+                        border: 2px solid $primary-3;
+                        background-color: $primary-3;
+                    }
+                }
+            }
+            .law_element_3{
+                position: absolute;
+                z-index: 0;
+                bottom: 0;
+                right: 10%;
+            }
+        }
+        &::after{
+            display: none;
+        }
+    }
+    z-index: 1;
+    margin-top: -130px;
+    position: relative;
+    &::after{
+        bottom: 0%;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height:calc(60% + 40px);
+        content: '';
+        position: absolute;
+       background: #F8F6F2;
+    }
+}
+.single_feature_item{
+    &.single_feature_item_2{
+        background: #222127;
+        .single_icon{
+            border: 2px solid rgba(200, 36, 47, 0.2);
+        }
+    }
+    background-color: $secondary-3;
+    padding: 10px;
+    border-radius: 4px;
+    position: relative;
+    .single_feature_widget{
+        border-radius: 6px;
+        border: 2px solid $secondary-3;
+       @include transition(0.4s);
+        padding: 30px 20px;
+        text-align: center;
+        .single_icon{
+            height: 100px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: auto;
+                height: 40px;
+            }
+            margin: 0 auto;
+            border-radius: 500px;
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 30px;
+        }
+        .single_content{
+            h4{
+                margin-bottom: 20px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 33px;
+                color: $white;
+            }
+            p{
+                color: $white;
+            }
+        }
+    }
+    .law_element_1{
+        top: 0;
+        right: 0 !important;
+        display: inline-block;
+    }
+    .law_element_2{
+        bottom:calc(10% - 20px);
+        left:0;
+    }
+    .law_element_1,.law_element_2{
+        position: absolute;
+    }
+    &:hover{
+        .single_feature_widget{
+            border: 2px solid #B69D74;
+        }
+    }
+}

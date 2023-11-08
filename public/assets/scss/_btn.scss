@@ -1,0 +1,110 @@
+/* ------------------------------------------------------------------
+   Template Default Button, Input Styles - Value Change with Your's Need
+ -------------------------------------------------------------------- */
+.btnd {
+    display: inline-block;
+    @include transition(.4s);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;   
+}
+
+.btn {
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+}
+
+.theme-btn {
+    color: $white;
+    @extend .btnd;    
+    padding: 18px 35px;
+    border-radius: 4px;
+    background-color: $second-color;
+    transition: all .3s ease-in-out;
+    &.theme-border{
+        border: 2px solid rgba(182, 157, 116, 0.3);
+        border-radius: 4px;
+        color: $primary-3;
+        background-color: transparent;
+        &:hover{
+          background-color:$secondary;
+          color: $white;
+        }
+    }
+
+    &.theme-border-2{
+    border: 2px solid $primary !important;
+    border-radius: 4px;
+    color: $white;
+    background-color: transparent;
+        &:hover{
+            background-color:$primary !important;
+            color: $white;
+        }
+    }
+    &.theme-border-3{
+        border: 2px solid $primary !important;
+        border-radius: 4px;
+        color: $primary;
+        background-color: transparent;
+            &:hover{
+                background-color:$primary !important;
+                color: $white;
+            }
+        }
+    @media (max-width: 991px) {
+        padding: 16px 30px 14px;
+    }
+    &.style-1{
+        i{
+            transform: rotate(90deg);
+            margin-right: 8px;
+        }
+    }
+    &.style_2{
+        background-color: $primary !important;
+        &:hover {
+            background: $theme-color !important;
+            color: $white;
+        }    
+    }
+    &.white {
+        background: $white;
+        box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.1);
+        color: $second-color;
+
+        &:hover {
+            background: $second-color;
+            color: $white;
+        }
+    }
+
+    
+    @media (max-width: 767px) {
+        padding: 14px 28px 12px;
+    }
+
+    @media (max-width: 580px) {
+        padding: 18px 35px 15px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 12px 25px 12px;
+        font-size: 15px;
+    }
+
+    i {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        background: $theme-color ;
+        color: $white;
+    }
+
+}

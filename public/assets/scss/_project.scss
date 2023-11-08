@@ -1,0 +1,223 @@
+/* ----------------------------------
+	Project section Styles
+ ------------------------------------ */
+ .our_project_wrapper{
+	@include overlay(#033A5B , 0.80) ;
+	&.our_project_wrapper_2{
+		@include overlay(#222127 , 0.60) ;
+
+	}
+	.top-btn{
+		background-color: $primary-3;
+		&:hover{
+			background-color: $primary-2;
+		}
+	}
+ }
+.single_our_item{
+	p{
+		color: $white;
+		margin: 15px 0px;
+	}
+	a{
+		margin-top: 30px;
+	}
+}
+.our_case_wrapper{
+	position: relative;
+	.left_element{
+		position: absolute;
+		top: 20%;
+		left: 5%;
+		animation: top-to-left 4s ease-in-out infinite;
+	}
+	.loyer_element{
+		position: absolute;
+		top: 10%;
+		right: 5%;
+		animation: top-to-left 4s ease-in-out  0.9s infinite;
+	}
+}
+.single_our_item_2{
+	.items_img{
+		height: 280px;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		border-radius: 4px;
+		img{
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			transform: scale(1);
+			@include transition(0.4s);
+		}
+		span{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: #FFFFFF;
+			border-radius: 0px 4px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 100%;
+			text-transform: uppercase;
+			color: $primary-3;
+			padding: 10px;
+		}
+	}
+	.content{
+		&.content-1{
+			h4{
+				color: $secondary-3;
+				transition: all 0.4s ease-in-out;
+				&:hover{
+					color: $primary-3;
+				}
+			}
+			i{
+				border-left: 1px solid rgba(182, 157, 116, 0.3);
+			}
+		}
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px;
+		border: 2px solid rgba(182, 157, 116, 0.3);
+		border-top: none;
+		border-radius: 4px;
+		h4{
+			font-style: normal;
+			font-weight: 600;
+			font-size: 30px;
+			@media (max-width:768px) {
+				font-size: 20px !important;
+				line-height: 29px;
+            }
+			line-height: 36px;
+			color: $white;
+			transition: all 0.4s ease-in-out;
+			&:hover{
+				color: $primary-3;
+			}
+		}
+		i{
+			border-left: 1px solid #6e5b53;
+			padding: 25px 0px 25px 25px;
+			color: $text;
+			@include transition(0.4s) ;
+			font-size: 40px;
+			@media (max-width:768px) {
+				font-size: 20px !important;
+				line-height: 29px;
+            }
+		}
+	}
+	&:hover{
+		.items_img{
+			img{
+				transform: scale(1.2);
+			}
+		}
+		.content{
+			i{
+				color: $primary-3;
+			}
+		}
+	}
+}
+.single_project_items{
+	&.single_project_items_2{
+		.project_img{
+			.content{
+				h6{
+					&::after{
+						content: '';
+						clear: both;
+						position: absolute;
+						width: 150px;
+						height: 3px;
+						left: 0px;
+						bottom: 0;
+						background: linear-gradient(90deg, #C8242F 0%, rgba(34, 33, 39, 0) 100%) !important;
+					}
+				}
+			}
+			.icon{
+				background: rgba(255, 255, 255, 0.05) !important;
+			}
+		}
+	}
+	.project_img{
+		overflow: hidden;
+		position: relative;
+		height: 490px;
+		@media (max-width: 768px) {
+            height: 390px;
+        }
+		width: auto;
+		border-radius: 4px;
+		@include overlay(#03395b , 0.4);
+		&::before{
+			border-radius: 4px;
+		}
+		.content{
+			bottom: 20px;
+			left: 20px;
+			position: absolute;
+			h6{
+				position: relative;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 100%;
+				color: $white;
+				padding-bottom: 30px;
+				&::after{
+					content: '';
+					clear: both;
+					position: absolute;
+					width: 150px;
+					height: 3px;
+					left: 0px;
+					bottom: 0;
+					background: linear-gradient(90deg, #B69D74 0%, rgba(34, 33, 39, 0) 100%);
+				}
+			}
+			
+			h4{
+				font-family: $pr;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 36px;
+				color: $white;
+				margin-bottom: 0;
+			}
+
+		}
+		.icon{
+			transition: all 0.4s ease-in-out;
+			position: absolute;
+			opacity: 0;
+			visibility: hidden;
+			top: -30px;
+			right: -30px;
+			height: 150px;
+			width: 150px;
+			border-radius: 500px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: rgba(182, 157, 116, 0.5);
+			z-index: 1;
+		}
+		&:hover{
+			.icon{
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}

@@ -1,0 +1,100 @@
+/* ----------------------------------
+	FAQ Section Styles
+ ------------------------------------ */
+ .faq_wrapper{
+    position: relative;
+    &.faq-1{
+        position: relative;
+        z-index: 2;
+        .feature_element{
+            z-index: -1;
+            position: absolute;
+            bottom: 30px;
+            top: 0%;
+            left:0%;
+            animation: top-to-left 4s ease-in-out infinite;
+        }
+        &::after{
+            z-index: -5;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 25%;
+            content: '';
+            height: calc(60% + 20px);
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            background-color: $primary-3;
+        }
+    }
+    .faq_shape{
+        position: absolute;
+        bottom: 6%;
+        animation: top-to-left 6s ease-in-out infinite;
+        left: calc(35% + 20px);
+    }
+    .theme-btn{
+        background-color: $primary-3;
+        color: $white;
+        @include transition(0.4s);
+        &:hover{
+            background-color: $primary-2;
+        }
+    }
+ }
+.accordion1,.accordion2,.accordion3,.accordion4,.accordion5,.accordion6{
+    display: none;
+    &.active{
+        display: block !important;
+    }
+}
+.tabs{
+    button{
+        padding: 8px 20px;
+        background: rgba(182, 157, 116, 0.1);
+        border-radius: 4px;
+        font-size: 16px;
+        color: #033A5B;
+        margin: 10px;
+        transition: all 0.4s ease-in-out;
+        &:active,&:hover,&:focus{
+            color: $white;
+            background: #B69D74;
+        }
+    }
+}
+.accordion-item{
+    margin: 10px 0px;
+    border: none;
+    .accordion-header{
+       .accordion-button{
+        box-shadow: none;
+        background: rgba(182, 157, 116, 0.1);
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        color: #222127;
+        &::after{
+            margin-left: auto;
+            content: "\f067";
+            font-family: $fa;
+            font-weight: 700;
+            background-image: none;
+        }
+       }
+       .accordion-button:not(.collapsed)::after {
+        content: "\f2d1";
+        font-family: $fa;
+        background-image: none;
+        font-weight: 700;
+        transform: rotate(0deg);
+    }
+    }
+   
+    h2 {
+        font-size: 48px; 
+        line-height: 20px; 
+    }
+}

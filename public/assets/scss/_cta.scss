@@ -1,0 +1,80 @@
+/* ----------------------------------
+	Call To Action Section Styles
+ ------------------------------------ */
+.cta_wrapper{
+	position: relative;
+	h2{
+		@media (max-width:768px) {
+			font-size: 35px !important;
+			line-height: 45px;
+		}
+	}
+	&.cta-1{
+		&.cta_2{
+			@include overlay(#033A5B , 0.00) ;
+		}
+		@include overlay(#033A5B , 0.80) ;
+		p{
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 27px;
+			color: $white;
+		}
+		.theme-btn{
+			border: 1px solid #FFFFFF;
+			border-radius: 4px;
+			i{
+				margin-left: 0;
+				margin-right: 6px;
+			}
+			&:hover{
+				color: $white;
+				background-color: $primary-2 !important;
+				border: 1px solid $primary-2;
+			}
+		}
+		.popup_video{
+			.popup-youtube{
+				background: rgba(255, 255, 255, 0.8);
+				animation: playVideo_2 infinite 3.5s;
+
+			}
+		}
+		h3{
+			font-style: normal;
+			font-weight: 500;
+			font-size: 30px;
+			line-height: 36px;
+			color: $white;
+			margin-top: 30px;
+		}
+	}
+	&.cta-2{
+		h2 , p{
+			color: $secondary-3 !important;
+		}
+		
+	}
+	
+	p{
+		margin: 20px 0px;
+	}
+	a{
+		margin-top: 40px;
+		background-color: $primary-3;
+	}
+	.law-hammer,.law-element{
+		position: absolute;
+		top: calc(20% + 10px);
+		
+	}
+	.law-element{
+		left: 20px;
+		animation: top-to-left 4s ease-in-out infinite;
+	}
+	.law-hammer{
+		right: 0px;
+		animation: top-to-left 4s ease-in-out 1s infinite;
+	}
+}
+

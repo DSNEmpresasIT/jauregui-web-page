@@ -1,0 +1,138 @@
+/* ----------------------------------
+	funfact Section Styles
+ ------------------------------------ */
+
+.funfact_wrapper{
+    position: relative;
+    &.funfact_wrapper-1{
+        background: #F8F6F2;
+        position: relative;
+        .feature_element{
+            position: absolute;
+            bottom: 30px;
+            left: calc(5% - 30px);
+            animation: top-to-left 4s ease-in-out infinite;
+        }
+    }
+    &.funfact_wrapper-2{
+        .single_funfact_items{
+            // border-left: 1px solid #B69D74;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: '';
+                width: 2px;
+                height:120px;
+                background-color: $primary-3;
+                top: 0;
+                right: 0;
+            }
+            padding: 0px 30px;
+            h3{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 100%;
+                font-family: $pr;
+                color: $primary-2;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+            }
+            h6{
+                font-style: normal;
+                font-family: $body-font;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+                color: $primary-2;
+            }
+        }
+        .col-sm-6{
+            &:last-child{
+                .single_funfact_items{
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+            @media (max-width:990px) {
+                &:nth-child(3){
+                    .single_funfact_items{
+                        &::after{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            @media (max-width:768px) {
+                &:nth-child(2){
+                    .single_funfact_items{
+                        &::after{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            @media (max-width:768px) {
+                .single_funfact_items{
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .law-hammer,.law-element{
+            position: absolute;
+            top: calc(20% + 10px);
+            
+        }
+        .law-element{
+            left: 20px;
+            animation: top-to-left 4s ease-in-out infinite;
+        }
+        .law-hammer{
+            right: 0px;
+            animation: top-to-left 4s ease-in-out 1s infinite;
+        }
+    }
+    &.funfact_wrapper_3{
+        @include overlay(#033A5B , 0.80) ;
+        .single_funfact_items{
+            h6, h3, h4{
+                color: $white;
+            }
+        }
+    }
+    &.funfact_wrapper_4{
+        @include overlay( #222127 , 0.80) ;
+        .single_funfact_items{
+            h6, h3, h4{
+                color: $white;
+            }
+        }
+    }
+}
+
+.single_funfact_items{
+    background-position: center center;
+    padding: 50px 0px;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    h6, h3, h4{
+        color: $secondary-3;
+    }
+    h6{
+        margin-bottom: 15px;
+    }
+
+    .bg_element{
+        position: absolute;
+        bottom: 5%;
+        left: 0%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

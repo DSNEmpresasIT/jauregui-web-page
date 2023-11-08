@@ -1,0 +1,190 @@
+/* ----------------------------------
+	why_chose section Styles
+ ------------------------------------ */
+ .single_chose_us{
+    p{
+        margin: 30px 0px;
+    }
+    .single_support{
+        margin: 25px 0px;
+        .icon{
+            margin-right: 20px;
+        }
+        .content{
+            h4{
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 100%;
+                margin-bottom: 5px;
+                color: $secondary-3;
+            }
+            p{
+                margin: 0px 0px;
+            }
+        }
+    }
+    .single_right{
+        width: 100%;
+        height: 560px;
+        border-radius: 6px;
+        position: relative;
+       @media (max-width:990px) {
+        margin-left: 0px;
+       }
+        .box{
+            position: absolute;
+            top: -15%;
+            right: -12%;
+            height: 200px;
+            width: 200px;
+            border-radius: 500px;
+            background: rgba(221, 204, 177, 0.6);
+            animation: box_paly infinite 3s;
+        }
+    }
+    .single_funfact{
+        width: 400px;
+        @media (max-width:768px) {
+            width: 200px;
+            height: 200px;
+            bottom:-20px;
+        }
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-image: url(../img/about_320x480.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: absolute !important;
+        left: -10%;
+        bottom:-70px;
+        .single_funfact_items{
+            h1{
+                font-style: normal;
+                font-weight: 700;
+                font-size: 90px;
+                line-height: 50px;
+                color: $white;
+                @media (max-width:768px) {
+                    font-size: 60px;
+                    sub{
+                        font-size: 25px;
+                    }
+                }
+                sub{
+                    font-size: 30px;
+                }
+            }
+            h3{
+                color: $white;
+                @media (max-width:768px) {
+                   font-size: 30px;
+                   line-height: 45px;
+                 }
+            }
+        }
+        &::before{
+            border-radius: 6px;
+        }
+        @include overlay( #033A5B , 0.70);
+    }
+}
+/* ----------------------------------
+	brand_wrapper Styles
+ ------------------------------------ */
+.brand_wrapper{
+    position: relative;
+    @include overlay(#033A5B , 0.80) ;
+    &.brand-1{
+        background: radial-gradient(78.47% 78.47% at 50% 50%, #EDE8DE 0%, rgba(248, 246, 242, 0) 100%);
+        @include overlay(#033A5B , 0.00) ;
+        .single_brand{
+            img{
+                
+            }
+        }
+    }
+    &.brand-2{
+        background-color: #666666;
+        @include overlay(#666666 , 0.00) ;
+    }
+    .single_brand{
+      
+        img{
+            cursor: pointer;
+            opacity: 0.5;
+            @include transition(0.4s);
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    .single_brand{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* ----------------------------------
+	skill_wrapper Styles
+ ------------------------------------ */
+
+.skill_wrapper{
+    background: #F8F6F2;
+}
+.single_skill_content{
+    padding: 100px 0px;
+    max-width: 630px;
+    margin-left: auto;
+    @media (max-width:990px) {
+        max-width: 100% !important;
+        padding: 80px 0px;
+    }
+    @media (max-width:568px) {
+        padding: 50px 0px;
+    }
+}
+.skill_bar{
+    .progress_bar{
+    p{
+        margin-bottom: 30px;
+      }
+      .single_progress_bar{
+        width: 100%;
+        height: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        background: rgba(182, 157, 116, 0.1);
+        border-radius: 35px;
+        overflow: hidden;
+        position: relative;
+          span {
+            height: 100%;
+            display: block;
+            background: #B69D74;
+            border-radius: 35px;
+            line-height: 30px;
+            position: absolute;
+            text-align: end;
+            padding-right: 5px;
+          }
+      }
+     h6{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 36px;
+      text-transform: capitalize;
+      color: $secondary-3;
+     }
+    }
+}
+.single_skill_img{
+    width: 100%;
+    height: 100%;
+}

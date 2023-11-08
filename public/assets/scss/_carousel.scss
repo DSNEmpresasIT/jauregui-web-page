@@ -1,0 +1,158 @@
+/* ----------------------------------
+	CAROUSEL section Styles
+------------------------------------ */
+
+.hero-1{
+    @include slider_rounded;
+    .owl-dots{
+        position: absolute;
+        top: calc(60% + 40px);
+        left: calc(100% - 98%);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .owl-dot{
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border-radius: 500px;
+            border: 1px solid $white;
+            &::after{
+                z-index: 2;
+                content: "";
+                width: 10px;
+                height: 10px;
+                line-height: 20px;
+                position: absolute;
+                background: #B3B3B3;
+                left: calc(50% - 5px);
+                border-radius: 500px;
+                top: calc(50% - 5px);
+                transition: all 0.3s ease-in-out;
+                transform: scale(0);
+            }
+            &.active::after {
+                transform: scale(1);
+              }
+        }
+    }
+}
+
+
+.testimonial_wrapper{
+    &.slick-2{
+        .slick-next ,.slick-prev{
+            color: $white;
+        }
+        .slick-dots{
+           
+            >li{
+               
+                button{
+                    background-color: transparent;
+                    color: $white;
+                }
+                &.slick-active{
+                    button{
+                        color: $white;
+                        &::before{
+                            color: $white;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    .slick-slider {
+        margin:0 -15px;
+    }
+    .slick-slide {
+        text-align:center;
+        margin-right:15px;
+        margin-left:15px;
+    }
+    .slick-dots{
+        margin-top: 50px;
+        text-align: center;
+        >li{
+            margin: 3px;
+            display: inline-block !important;
+            gap: 5px;
+            button{
+                background-color: transparent;
+                color: #666666;
+                display: none;
+            }
+            &.slick-active{
+                button{
+                    display: block !important;
+                    font-size: 30px;
+                    color: $primary-3;
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        top: 0;
+                        right: -30px;
+                        font-size: 20px;
+                        content: "/ 5";
+                        clear: both;
+                        color: $second-color-2;
+                    }
+                }
+            }
+            
+        }
+    }
+    .slick-next ,.slick-prev {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 28px;
+        color: $secondary-3;
+        position: absolute;
+        bottom: 0;
+        background-color: transparent;
+        i{
+            margin: 0px 10px;
+            color: $primary-3;
+        }
+    } 
+    .slick-next{
+        right: calc(40% - 10px);
+        @media (max-width:1200px) {
+            right: calc(30% - 10px);
+        }
+        @media (max-width:768px) {
+            right: calc(30% - 30px);
+        }
+        @media (max-width:568px) {
+            right: calc(20% - 10px);
+        }
+    }
+    .slick-prev{
+        left: calc(40% - 10px);
+        @media (max-width:1200px) {
+            left: calc(30% - 10px);
+        }
+        @media (max-width:768px) {
+            left: calc(30% - 30px);
+        }
+        @media (max-width:568px) {
+            left: calc(20% - 10px);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
